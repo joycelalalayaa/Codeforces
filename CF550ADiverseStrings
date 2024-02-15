@@ -1,0 +1,53 @@
+import java.util.*;
+
+public class CF550ADiverseStrings {
+    public static void main(String[] args) {
+        Scanner fs = new Scanner(System.in);
+        int testcases = fs.nextInt();
+        outer: for (int tc = 0; tc < testcases; tc++) {
+            String next = fs.next();
+            // if (next.length() == 1) {
+            // System.out.println("Yes");
+            // }
+
+            for (int i = 0; i < next.length(); i++) {
+                for (int j = i + 1; j < next.length(); j++) {
+                    if (next.charAt(i) == next.charAt(j)) {
+                        System.out.println("No");
+                        continue outer;
+                    }
+                }
+            }
+
+            boolean[] tAf = new boolean[26];
+            Arrays.fill(tAf, false);
+            for (char each : next.toCharArray()) {
+                tAf[each - 'a'] = true;
+            }
+            int trueCounts = 0;
+            for (int i = 0; i < 26; i++) {
+                if (tAf[i] == true) {
+                    trueCounts++;
+                }
+            }
+            int consecutiveTrue = 0;
+            for (int i = 0; i < 26; i++) {
+                if (tAf[i] == true) {
+                    consecutiveTrue++;
+                }
+                if (i != 25) {
+                    if (consecutiveTrue > 0 && tAf[i + 1] == false) {
+                        break;
+                    }
+                }
+            }
+            if (consecutiveTrue == trueCounts) {
+                System.out.println("Yes");
+            } else {
+                System.out.println("No");
+            }
+
+        }
+    }
+
+}
