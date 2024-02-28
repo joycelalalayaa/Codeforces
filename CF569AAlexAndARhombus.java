@@ -6,10 +6,8 @@ public class CF569AAlexAndARhombus {
         int n = fs.nextInt();
         int ans = 1;
         for (int i = 1; i <= n; i++) {
-            ans += 2 * (i - 1) * 2;
+            ans += 4 * (i - 1);
         }
         System.out.println(ans);
     }
 }
-
-// hiii
