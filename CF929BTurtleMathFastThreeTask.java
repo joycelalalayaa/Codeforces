@@ -29,17 +29,14 @@ public class CF929BTurtleMathFastThreeTask {
                     System.out.println(1);
                 } else if (two >= 2) {
                     System.out.println(2);
-                } 
-            } else {
-                if (two > 0) {
-                    System.out.println(1);
-                } else if (one % 3 == 2) {
-                    System.out.println(1);
-                } else {
-                    System.out.println(2);
+                } else{
+                    throw null;
                 }
+            } else {
+                System.out.println(1);
             }
         }
     }
 }
+
 
