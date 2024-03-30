@@ -1,16 +1,17 @@
 import java.util.*;
 
-public class CF898AShortSort {
+public class CF937E {
     public static void main(String[] args) {
         Scanner fs = new Scanner(System.in);
         int testcases = fs.nextInt();
         for (int tc = 0; tc < testcases; tc++) {
             char[] arr = fs.next().toCharArray();
-            if(arr[0] == 'a' || arr[1] == 'b' || arr[2] == 'c'){
-                System.out.println("YES");
-            } else {
-                System.out.println("NO");
+            char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+            int[] freq = new int[26];
+            for (int i = 0; i < 26; i++) {
+                
             }
+
         }
     }
 }
