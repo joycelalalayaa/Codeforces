@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class CF878ACipherShifer {
     public static void main(String[] args) {
@@ -6,19 +6,19 @@ public class CF878ACipherShifer {
         int testcases = fs.nextInt();
         for (int tc = 0; tc < testcases; tc++) {
             int len = fs.nextInt();
-            String s = fs.next();
-            StringBuilder decrypted = new StringBuilder();
-
-            for (int i = 0; i < len; i++) {
-                for (int j = i + 1; j < len; j++) {
-                    if (s.charAt(i) == s.charAt(j)) {
-                        decrypted.append(s.charAt(i));
-                        i = j;
-                    }
+            char[] arr = fs.next().toCharArray();
+            int i = 0;
+            while (i < len) {
+                int start = i;
+                System.out.print(arr[i++]);
+                while (i < len && arr[i] != arr[start]) {
+                    i++;
+                }
+                if (i < len) {
+                    i++; 
                 }
             }
-
-            System.out.println(decrypted.toString());
+            System.out.println();
         }
     }
 }
