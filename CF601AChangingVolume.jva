@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class CF601AChangingVolume {
+    public static void main(String[] args) {
+        Scanner fs = new Scanner(System.in);
+        int testcases = fs.nextInt();
+        for (int tc = 0; tc < testcases; tc++) {
+            int current = fs.nextInt(), desired = fs.nextInt();
+            int ans = Math.abs(current-desired) / 5 + Math.abs(current-desired) %5 + Math.abs(current-desired) 
+        }
+    }
+}
